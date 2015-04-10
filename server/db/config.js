@@ -1,6 +1,6 @@
 // INITIATION: add mongoose to project and open connection to database on locally running MongoDB instance 
 var mongoose = require('mongoose');
-var mongoURI = process.env.MONOGOLAB_URI || 'mongodb://localhost/hackbox';
+var mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost/hackbox';
 var db = mongoose.connection;
 
 // CONNECTION: pending to database on local host; need notification if connected successfully or error occured
