@@ -9,7 +9,7 @@
     CreateInterviewCtrl.$inject = ['$scope', 'Room'];
 
     function CreateInterviewCtrl($scope, Room) {
-      $scope.interview = {name: "John Doe", email: "john@email.com", time: ''};
+      $scope.interview = {name: "firstname lastname", email: "email", time: ''};
 
       $scope.reset = function() {
         console.log('reset');
