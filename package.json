@@ -4,6 +4,7 @@
   "description": "technical interview platform",
   "main": "client/index.html",
   "scripts": {
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,7 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "phantomjs": "^1.9.16"
   },
-  "engines": {
+   "engines": {
       "node": "0.10.x"
     },
   "dependencies": {
