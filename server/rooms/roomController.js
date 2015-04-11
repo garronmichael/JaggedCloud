@@ -9,7 +9,7 @@ var handleError = function(error) {
 
 // instantiation pattern: var partyRoom = new Room() --> need to pass data into room upon instantiation?
 module.exports.create = function(req, res) {
-  console.log('create request.body', req.body);
+  console.log(req.body);
   var user = req.body.name;
   var startTime = req.body.time;
   var email = req.body.email;
