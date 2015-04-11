@@ -3,6 +3,7 @@ var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var MongoStore = require('connect-mongo')(session);
+var favicon = require('serve-favicon');
 
 module.exports = function(app, express) {
 
@@ -16,14 +17,11 @@ module.exports = function(app, express) {
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   // initialize passport and sessions
-  // app.use(express.session({ secret: 'keyboard cat' }));
   app.use(passport.initialize());
-  // app.use(passport.session());
 
   // serve html and css 
-  app.use(express.static(__dirname + '/../client'));
-
-  // serve static files
+  console.log(__dirname + '/../client/lib/favicon.ico')
+  app.use(favicon(__dirname + '/../client/lib/favicon.ico'));
   app.use(express.static(__dirname + '/../client'));
 
   // required for passport sessions
