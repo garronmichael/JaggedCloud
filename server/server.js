@@ -25,7 +25,7 @@ var app = express();
 var db = require('./db/config.js');
 
 // console.log('Server.js: Environmental variables:', process.env);
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 require('./routes')(app, express);
 
