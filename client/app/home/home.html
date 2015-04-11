@@ -2,10 +2,11 @@
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div>
-        <ul>
-          <li ng-controller='signinCtrl'><a ng-click='openModal()' href="#/signin">Sign In</a></li>
-          <li><a ng-click='logout()' href="/auth/logout">Logout</a></li>
-          <li><a ui-sref='room({roomId: "hackbox"})'>Go to Room</a></li>
+        <ul class="nav nav-tabs">
+          <li class="divider-vertical"><a href="#/">HackBox</a></li>
+          <li class="divider-vertical" ng-controller='signinCtrl'><a ng-click='openModal()' href="#/signin">Sign In</a></li>
+          <li class="divider-vertical"><a ng-click='logout()' href="/auth/logout">Logout</a></li>
+          <li class="divider-vertical"><a ui-sref='room({roomId: "hackbox"})'>Go to Room</a></li>
         </ul>
         <div class='interviews-container'>
           <div class='interview' ng-repeat='interview in incompleteInterviews' ng-click='joinRoom(interview)'>
@@ -16,10 +17,10 @@
         </div>
         <div ng-controller="createInterviewCtrl">
           <h1>Create an Interview</h1>
-          <form novalidate class="simple-form">
-            Name: <input type="text" ng-model="interview.name"/><br />
-            E-mail: <input type="email" ng-model="interview.email" /><br />
-            Time:   <input type="datetime-local" ng-model="interview.time"/>
+          <form novalidate class="simple-form" class="form-inline">
+            <input type="text" ng-model="interview.name"/>
+            <input type="email" ng-model="interview.email" />
+            <input type="datetime-local" ng-model="interview.time"/>
             <input type="button" ng-click="reset()" value="Reset" />
             <input type="submit" ng-click="createInterview(interview)" value="Submit" />
           </form>
