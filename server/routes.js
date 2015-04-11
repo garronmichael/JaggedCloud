@@ -26,7 +26,7 @@ module.exports = function(app, express) {
 
   // required for passport sessions
   app.use(bodyParser());
-  app.use( session({ key: 'session', secret: 'SUPER SECRET', store: new MongoStore({ url: process.env.MONGO_URI || 'mongodb://localhost/hackbox'}) }) );
+  app.use( session({ key: 'session', secret: 'SUPER SECRET', store: new MongoStore({ url: process.env.MONGOLAB_URI || 'mongodb://localhost/hackbox'}) }) );
   app.use(passport.initialize());
   app.use(passport.session());
   
