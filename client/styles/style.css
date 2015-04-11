@@ -1,5 +1,38 @@
 body { 
-    padding-top: 70px;
+  color: #00ff00;
+  font-family: Orbitron;
+  background-color: rgb(12, 12, 12);
+}
+
+.header {
+  width: 100%;
+  border: 1px solid #000;
+  text-align: center;
+  margin: 1% 0 0 0;
+}
+
+.title {
+  font-family: Orbitron;
+  font-size: 88px;
+  color: #00ff00;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #0000ff;
+}
+
+a:visited {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:visited:hover {
+    color: #0000ff;
+    text-decoration: none;
 }
 
 .interview{
