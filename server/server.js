@@ -11,14 +11,14 @@ var httpsPort = 8000;
 var app = express();
 require('./routes')(app, express);
 
-var options = {
-  key: fs.readFileSync(__dirname + '/ssl/key.pem'),
-  cert: fs.readFileSync(__dirname + '/ssl/cert.pem')
-};
+// var options = {
+//   key: fs.readFileSync(__dirname + '/ssl/key.pem'),
+//   cert: fs.readFileSync(__dirname + '/ssl/cert.pem')
+// };
 
-https.createServer(options, app).listen(httpsPort, function(){
-    console.log('https server listening on port', httpsPort);
-});
+// https.createServer(options, app).listen(httpsPort, function(){
+//     console.log('https server listening on port', httpsPort);
+// });
 
 var server = http.createServer(app).listen(port, function() {
   console.log('Server listening on port', port);

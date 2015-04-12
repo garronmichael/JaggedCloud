@@ -7,25 +7,25 @@
           <li class="divider-vertical"><a ng-click='logout()' href="/auth/logout">Logout</a></li>
           <li class="divider-vertical"><a ui-sref='room({roomId: "hackbox"})'>Go to Room</a></li>
         </ul>
-        <div class='interviews-container'>
-          <div class='interview' ng-repeat='interview in incompleteInterviews' ng-click='joinRoom(interview)'>
-              <h2 class='company'>{{interview.company}}</h2>
-              <div class='startTime'>@ {{interview.start_time}}</div>
-              <div class='createdBy'>with {{interview.created_by}}</div>
-          </div>
-        </div>
         <div ng-controller="createInterviewCtrl">
         <div class="homepage">
           <div class="schedule">Schedule an Interview</div>
-          <div class="form">
+        <div class="form">
           <form novalidateclass="simple-form">
             <input class="userinput" type="text" ng-model="interview.name"/>
             <input class="userinput" type="email" ng-model="interview.email" />
             <input class="userinput" type="datetime-local" ng-model="interview.time"/>
             <input class="userinput" type="submit" ng-click="createInterview(interview)" value="Submit" />
           </form>
-          </div>
         </div>
+        </div>
+        </div>
+        <div class='interviews-container'>
+          <div class='interview' ng-repeat='interview in incompleteInterviews' ng-click='joinRoom(interview)'>
+              <h2 class='company'>{{interview.company}}</h2>
+              <div class='startTime'>@ {{interview.start_time}}</div>
+              <div class='createdBy'>with {{interview.created_by}}</div>
+          </div>
         </div>
     </div>
 </div>

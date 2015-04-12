@@ -38,12 +38,14 @@ a:visited:hover {
 .interview{
   width:75%;
   height:10%;
-  border:3px solid green;
+  border:3px solid #fff;
+  border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
   padding:5px;
 }
+
 .interview:hover{
     background: #B2B2CC;
 }
@@ -55,10 +57,10 @@ a:visited:hover {
 }
 
 .createdBy{
+}
 
 .homepage {
   margin: 10px 0 0 0;
-  /*border: 1px solid #000;*/
   height: 100%;
   width: 100%;
   text-align: center;

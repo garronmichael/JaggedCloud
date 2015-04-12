@@ -93,7 +93,7 @@ module.exports.fetchAll = function(req, res) {
       handleError(err); 
       res.send(404, 'cannot find user by ID');
     }
-    else {
+    if(user) {
       var rooms = user.rooms;
       for (var i = 0; i < rooms.length; i++) {
         Room.findById(rooms[i], function(err, room){
@@ -116,6 +116,8 @@ module.exports.fetchAll = function(req, res) {
           }
         });
       }
+    } else {
+      res.send(304);
     }
   });
 }
