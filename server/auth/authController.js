@@ -7,6 +7,7 @@ module.exports.callback = passport.authenticate('github', {successRedirect: '/'}
 module.exports.logout = function(req, res) {
     req.logout();
     req.session.destroy();
+    res.redirect('/');
 }
 
 module.exports.isAuthenticated = function(req, res) {
