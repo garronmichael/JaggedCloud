@@ -1,9 +1,8 @@
 <div id="home-container">
     <div class="container-fluid">
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div>
-        <ul class="nav nav-tabs">
-          <li class="divider-vertical"><a href="#/">HackBox</a></li>
+        <ul class="nav nav-tabs navbar">
+          <li class="divider-vertical title"><a href="#/">HackBox</a></li>
           <li class="divider-vertical" ng-controller='signinCtrl'><a ng-click='openModal()' href="#/signin">Sign In</a></li>
           <li class="divider-vertical"><a ng-click='logout()' href="/auth/logout">Logout</a></li>
           <li class="divider-vertical"><a ui-sref='room({roomId: "hackbox"})'>Go to Room</a></li>
@@ -16,15 +15,17 @@
           </div>
         </div>
         <div ng-controller="createInterviewCtrl">
-          <h1>Create an Interview</h1>
-          <form novalidate class="simple-form" class="form-inline">
-            <input type="text" ng-model="interview.name"/>
-            <input type="email" ng-model="interview.email" />
-            <input type="datetime-local" ng-model="interview.time"/>
-            <input type="button" ng-click="reset()" value="Reset" />
-            <input type="submit" ng-click="createInterview(interview)" value="Submit" />
+        <div class="homepage">
+          <div class="schedule">Schedule an Interview</div>
+          <div class="form">
+          <form novalidateclass="simple-form">
+            <input class="userinput" type="text" ng-model="interview.name"/>
+            <input class="userinput" type="email" ng-model="interview.email" />
+            <input class="userinput" type="datetime-local" ng-model="interview.time"/>
+            <input class="userinput" type="submit" ng-click="createInterview(interview)" value="Submit" />
           </form>
+          </div>
         </div>
-      </div>
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </div>
