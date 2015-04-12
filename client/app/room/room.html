@@ -1,7 +1,11 @@
+<div class="container-fluid">
 <div id="room-container">
-    <h1>Room</h1>
-    <button ng-click='toggleCanvas()'>Toggle Canvas</button>
-    <button type="buton"ng-click="saveData()">Save Data</button>
+  <ul class="nav nav-tabs navbar">
+    <li class="divider-vertical title"><a href="#/">HackBox</a></li>
+    <li class="divider-vertical"><a ng-click='logout()' href="/auth/logout">Logout</a></li>
+    <li class="divider-vertical"><a ng-click='toggleCanvas()'>Toggle Canvas</a></li>
+    <li class="divider-vertical"><a ng-click="saveData()">Save Data</a></li>
+  </ul>
     <div ng-controller='textEditorCtrl' ng-show='!showCanvas' class='textEditor-container'>
         <div class="tab-box"> 
             <div ng-class='{"tab-container": !editor.tab.active, "activeTab-container": editor.tab.active}' ng-click="setActiveEditor(editor.id)" ng-repeat='editor in editors'>
@@ -19,5 +23,6 @@
         <video class='userVideo' ng-src='{{userVideoSource}}' autoplay></video>
         <video class='peerVideo' ng-src='{{peerVideoSource}}' autoplay></video>
     </div>
+</div>
 </div>
 
