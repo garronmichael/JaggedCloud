@@ -1,39 +1,39 @@
 body { 
-  color: #00ff00;
-  font-family: Orbitron;
-  background-color: rgb(12, 12, 12);
+  color: #9078AD;
+  font-family: 'Helvetica Nueue', Helvetica, sans-serif;
+  font-weight: 300;
+  background-color: #321456;
 }
 
-.header {
-  width: 100%;
-  border: 1px solid #000;
-  text-align: center;
-  margin: 1% 0 0 0;
+.navbar {
+  border-bottom: 1px solid #9078AD;
+  border-left: 1px solid #9078AD;
+  width: 30%;
+  min-height: 10px;
+  margin: 5px 0 0 0;
+  top: 0px;
 }
 
-.title {
-  font-family: Orbitron;
-  font-size: 88px;
-  color: #00ff00;
-  text-decoration: none;
-}
 a {
+  color: #9078AD;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
-  color: #0000ff;
+  color: #9078AD;
 }
 
 a:visited {
-    color: #00ff00;
+    color: #9078AD;
     text-decoration: none;
 }
 
 a:visited:hover {
-    color: #0000ff;
+    color: #9078AD;
     text-decoration: none;
 }
+
 
 .interview{
   width:75%;
@@ -55,33 +55,66 @@ a:visited:hover {
 }
 
 .createdBy{
+
+.homepage {
+  margin: 10px 0 0 0;
+  /*border: 1px solid #000;*/
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.schedule {
+  background-color: #321456;
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: 100;
+  font-size: 36px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto 0 auto;
+}
+
+.userinput {
+  font-size: 16px;
+  height: 30px;
+  margin: 10px 0 10px 0;
+}
+
+.form {
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  z-index: 2;
 }
 
 #room-container{
     position:absolute;
     border:3px solid red;
-    width:100%;
+    width:95%;
     height:100%;
 }
 
 .textEditor-container{
     position:relative;
-    margin: 10px;
-    width: 60%;
+    margin: 10px auto 0 auto;
+    width: 100%;
     height: 80%;
     border:3px solid green;
-    float:left;
 }
 
 .video-container{
-    position:relative;
-    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 250px;
     height:250px;
-    bottom:0;
-    right:0;
-    float:left;
     border:5px solid brown;
+    z-index: 2;
 }
 
 .canvas-container {
@@ -102,8 +135,8 @@ a:visited:hover {
 }
 
 .peerVideo {
-    height: 200px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     border:5px solid blue;
     position: absolute;
     z-index: -1;
