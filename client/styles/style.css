@@ -96,7 +96,7 @@ a:visited:hover {
 
 #room-container{
     position:absolute;
-    border:3px solid red;
+    /*border:3px solid red;*/
     width:95%;
     height:100%;
 }
@@ -106,7 +106,27 @@ a:visited:hover {
     margin: 10px auto 0 auto;
     width: 100%;
     height: 80%;
-    border:3px solid green;
+    /*border:3px solid green;*/
+}
+
+.drawing-container {
+    background-color: #fff;
+    width: 100%;
+    height: 80%;
+    /*border: 3px solid blue;*/
+    overflow: hidden;
+}
+
+#drawingCanvas {
+  height: 100%;
+  width: 100%;
+}
+
+.canvas-container {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    /*border:3px solid purple;*/
 }
 
 .video-container{
@@ -115,44 +135,36 @@ a:visited:hover {
     right: 0;
     width: 250px;
     height:250px;
-    border:5px solid brown;
+    /*border:5px solid brown;*/
     z-index: 2;
 }
 
-.canvas-container {
-    position:relative;
-    margin: 10px;
-    width: 60%;
-    height: 80%;
-    border:3px solid purple;
-    float:left;
-}
 
 .userVideo {
     height: 50px;
     width: 50px;
     float: left;
-    border:5px solid orange;
+    /*border:5px solid orange;*/
     position: absolute;
 }
 
 .peerVideo {
     height: 100%;
     width: 100%;
-    border:5px solid blue;
+    /*border:5px solid blue;*/
     position: absolute;
     z-index: -1;
 }
 
 .tab-box { 
   display:inline-block;
-  border-bottom: 1px solid #DDD;
+  /*border-bottom: 1px solid #DDD;*/
   position: relative;
 }
 
 .tab-container {
   display: inline-block;
-  border:1px solid #DDD;
+  /*border:1px solid #DDD;*/
   color:#666666;
   text-decoration:none;
   background-color: #eee;
@@ -162,7 +174,7 @@ a:visited:hover {
 
 .activeTab-container {
   display: inline-block;
-  border:1px solid #DDD;
+  /*border:1px solid #DDD;*/
   color:#666666;
   text-decoration:none;
   background-color: gray;
@@ -205,7 +217,7 @@ a:visited:hover {
     width:10px;
     height:10px;
     line-height:50px;
-    border: 2px solid #f5f5f5;
+    /*border: 2px solid #f5f5f5;*/
     border-radius: 50%;
     color:#f5f5f5;
     background: #464646;

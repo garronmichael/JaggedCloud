@@ -39,10 +39,7 @@
     function makeCanvas() {
       console.log('making a canvas');
       var newCanvas = $('<canvas></canvas>')
-          .css({position: 'absolute', top: 250, left: 250})
-          .attr('width', 300)
-          .attr('height', 300)
-          .attr('id', 'drawingCanvas');
+        .attr('id', 'drawingCanvas');
 
       $('.drawing-container').append(newCanvas);
 
@@ -51,8 +48,8 @@
       });
 
       _fabricCanvas.freeDrawingBrush = new fabric['Circle'+ 'Brush'](_fabricCanvas);
-      _fabricCanvas.setHeight(400);
-      _fabricCanvas.setWidth(650);
+      _fabricCanvas.setHeight(2000);
+      _fabricCanvas.setWidth(2000);
 
       return _fabricCanvas;
     }
