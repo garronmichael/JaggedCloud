@@ -8,7 +8,9 @@ var fs = require('fs');
 var port = process.env.PORT || 3000;
 var httpsPort = 8000;
 
-var app = express();
+// console.log('Server.js: Environmental variables:', process.env);
+var port = process.env.PORT || 3000;
+
 require('./routes')(app, express);
 
 // var options = {
