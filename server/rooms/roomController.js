@@ -100,7 +100,7 @@ module.exports.fetchAll = function(req, res) {
         Room.findById(rooms[i], function(err, room){
           if (err) { 
             handleError(err); 
-            roomsArray.push(null);
+            roomsArray.push({});
           }
           else {
             var roomData = {
